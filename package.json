@@ -9,7 +9,7 @@
   "dependencies": {
     "gitbook-plugin-search": "*",
     "html-entities": "1.2.0",
-    "lunr": "0.5.12"
+    "lunr": "git+https://github.com/yc0/lunr.js.git#un-participle"
   },
   "homepage": "https://github.com/GitbookIO/plugin-lunr",
   "repository": {
@@ -35,6 +35,6 @@
     }
   },
   "scripts": {
-    "prepublish": "cp node_modules/lunr/lunr.min.js ./assets/lunr.min.js"
+    "prepublish": "cp node_modules/lunr/lunr.js ./assets/lunr.js"
   }
 }
