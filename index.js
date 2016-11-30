@@ -35,7 +35,7 @@ module.exports = {
     book: {
         assets: './assets',
         js: [
-            'lunr.min.js', 'search-lunr.js'
+            'lunr.js', 'search-lunr.js'
         ]
     },
 
