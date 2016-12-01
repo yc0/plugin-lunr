@@ -9,7 +9,9 @@
   "dependencies": {
     "gitbook-plugin-search": "*",
     "html-entities": "1.2.0",
-    "lunr": "git+https://github.com/yc0/lunr.js.git#un-participle"
+    "lunr": "git+https://github.com/yc0/lunr.js.git#un-participle",
+    "segment": "0.1.3",
+    "lodash":"~4.17.2"
   },
   "homepage": "https://github.com/GitbookIO/plugin-lunr",
   "repository": {

@@ -1,4 +1,6 @@
 var lunr = require('lunr');
+var Segment = require('segment').Segment;
+var _ = require('lodash');
 var Entities = require('html-entities').AllHtmlEntities;
 
 var Html = new Entities();
@@ -30,6 +32,8 @@ var documentsStore = {};
 
 var searchIndexEnabled = true;
 var indexSize = 0;
+var segment = new Segment();
+segment.useDefault();
 
 module.exports = {
     book: {
@@ -68,6 +72,12 @@ module.exports = {
             if (page.search) {
                 keywords = page.search.keywords || [];
             }
+            var words = segment.doSegment(text);
+            _(words).forEach(function(word) {
+                keywords = _.concat(keywords,[word.w]);
+	        });
+            keywords = _.uniq(keywords);
+            
 
             // Add to index
             var doc = {
