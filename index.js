@@ -39,8 +39,11 @@ module.exports = {
     book: {
         assets: './assets',
         js: [
-            'lunr.js', 'search-lunr.js'
-        ]
+            'lunr.js', 'search-lunr.js','highlight.js'
+        ],
+        css: [
+            'highlight.css'
+	]
     },
 
     hooks: {
