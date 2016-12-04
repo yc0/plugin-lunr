@@ -2,18 +2,24 @@
 
 This plugin provides a backend for the [search](https://github.com/GitbookIO/plugin-search) plugin.
 
-This plugin is a default plugin.
+This plugin is a modified default plugin. It supplies chinese segmentation and highlight features in this plugin.
 
-### Disable this plugin
+### Demo preview
 
-This is a default plugin and it can be disabled using a `book.json` configuration:
+![](https://raw.githubusercontent.com/yc0/plugin-lunr/master/demo/demo.gif)
+
+### Usage
+
+Put this in your book.json, and it would automatically replace your default lunr search engine.
 
 ```js
 {
-    "plugins": ["-lunr"]
+    "plugins": ["lunr@git+https://github.com/yc0/plugin-lunr.git"]
 }
 ```
-
+```bash
+root@1f771d0d716c#gitbook install
+```
 ### Limitations
 
 Lunr can't index a huge book, by default the index size is limited at ~100ko.
