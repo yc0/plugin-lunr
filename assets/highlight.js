@@ -4,7 +4,11 @@ require([
 ], function(gitbook,$) {
     var events = gitbook.events;
     events.bind('start', function (e, config) {
-        // 初始化
+        // initilization
+        init();
+    });
+    events.bind('page.change', function(e, config) {
+        // after page changes
         init();
     });
     var init = function() {
@@ -22,10 +26,10 @@ require([
 
                 var key = $('#book-search-input input').val();
                 if ( key && 0 !== key.length) {
-                    var reg = new RegExp(key,'igm');
+                    var reg = new RegExp('('+key.replace(/,/,'|')+')','igm');
                     $('.search-results-item p').each(function() {
                         var me = $(this);                    
-                        var text = me.text().replace(reg,'<span class="search-highlight">'+key+'</span>');                    
+                        var text = me.text().replace(reg,'<span class="search-highlight">$1</span>');                    
                         me.html(text);
                     });                  
                 //$('.search-results-item p').html($('.search-results-item p').html().replace(reg,'$1<span class="search-highlight">$2</span>'));
