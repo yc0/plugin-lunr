@@ -4,6 +4,8 @@ This plugin provides a backend for the [search](https://github.com/GitbookIO/plu
 
 This plugin is a modified default plugin. It supplies chinese segmentation and highlight features in this plugin.
 
+本功能提供簡易的中文搜尋功能，基於原生的lunr搜尋引擎增加高亮和中文索引。
+
 ### Demo preview
 
 ![](https://raw.githubusercontent.com/yc0/plugin-lunr/master/demo/demo.gif)
